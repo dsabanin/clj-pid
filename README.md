@@ -9,7 +9,7 @@ Available from <a href="https://clojars.org/clj-pid">Clojars</a>.
 ## Usage
 
 ```clj
-(use '(clj-pid.core :as pid))
+(use ['clj-pid.core :as 'pid])
 
 (def pid-file "/var/run/my-daemon.pid")
 
