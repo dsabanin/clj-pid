@@ -24,3 +24,8 @@
   "Delete pid-file on JVM shutdown"
   [pid-file]
   (.addShutdownHook (Runtime/getRuntime) (Thread. #(delete pid-file))))
+
+(defn initialize! [pid-file]
+  (doto pid-file
+    save
+    delete-on-shutdown!))
