@@ -1,6 +1,6 @@
 # clj-pid
 
-Tiny Clojure library to work retrieve current process PID and handle pid files
+Tiny Clojure library to get current process ID and save/read PID files.
 
 ## Install
 
@@ -27,7 +27,7 @@ Available from <a href="https://clojars.org/clj-pid">Clojars</a>.
 ```
 ## License
 
-Copyright (C) 2012 Dima Sabanin
+Copyright (C) 2013 Dima Sabanin
 
 Distributed under the Eclipse Public License, the same as Clojure.
 
