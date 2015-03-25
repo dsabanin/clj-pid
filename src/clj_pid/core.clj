@@ -2,13 +2,14 @@
   (:require [clojure.string :as string])
   (:import java.io.File))
 
-(defn current 
-  "Get current process PID" 
-  []
-  (-> (java.lang.management.ManagementFactory/getRuntimeMXBean)
-    (.getName)
-    (string/split #"@")
-    (first)))
+(def current 
+  "Get current process PID"
+  (memoize
+   (fn []
+     (-> (java.lang.management.ManagementFactory/getRuntimeMXBean)
+         (.getName)
+         (string/split #"@")
+         (first)))))
 
 (defn save
   "Save current PID to a pid-file"
